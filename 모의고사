@@ -1,0 +1,28 @@
+# https://programmers.co.kr/learn/courses/30/lessons/42840
+
+# 내 풀이
+def solution(answers):
+    answer = []
+    m1 = [1,2,3,4,5]
+    m2 = [2,1,2,3,2,4,2,5]
+    m3 = [3,3,1,1,2,2,4,4,5,5]
+    m1count = 0
+    m2count = 0
+    m3count = 0
+    for i in range(len(answers)):
+        if answers[i] == m1[i%5]:
+            m1count += 1
+    for i in range(len(answers)):
+        if answers[i] == m2[i%8]:
+            m2count += 1
+    for i in range(len(answers)):
+        if answers[i] == m3[i%10]:
+            m3count += 1
+    M = max(m1count, m2count, m3count)
+    if m1count == M:
+        answer.append(1)
+    if m2count == M:
+        answer.append(2)
+    if m3count == M:
+        answer.append(3)        
+    return answer
