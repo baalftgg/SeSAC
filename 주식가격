@@ -1,7 +1,7 @@
 # 문제
 # https://programmers.co.kr/learn/courses/30/lessons/42584
 
-# 내가 생각한 답
+# 내가 생각한 오답 : 어느 부분이 효율성을 잡아 먹는지 공부 필요
 def solution(prices):
     answer = []
     while prices != []:
@@ -14,7 +14,7 @@ def solution(prices):
         answer.append(ans)
     return answer
     
-# 많이 푼 답
+# 많이 푼 답 : 원소 0 배열 활용
 def solution(prices):
     answer = [0] * len(prices)
     for i in range(len(prices)):
